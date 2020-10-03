@@ -8,6 +8,10 @@
         <!--bootstrap-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <style>
+            body, html {
+                height: 100%;
+            }
+
             /*Navigation*/
             #menu {
                 background: #0099CC;
@@ -127,6 +131,40 @@
                 width: 50%;
             }
 
+            /*creating a fix scroll effect*/
+            .parallax {
+                /* The image used */
+                background-image: url('moneylender_singapore.gif');
+
+                /* Full height */
+                height: 80%; /*100%*/
+
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center 100px;
+                background-repeat: no-repeat;
+                background-size: 80%;
+            }
+            
+            /*Caption on top of scrolling image*/
+            /*box*/
+            .caption {
+                position: absolute;
+                left: 0;
+                top:75%;
+                width: 100%;
+                text-align: center;
+                color: #000;
+            }
+            /*text colour*/
+            .caption span.border1 {
+                background-color: #0099CC;
+                color: #fff;
+                padding: 15px;
+                font-size: 20px;
+                letter-spacing: 10px;
+            }
+
             /*Split columns*/
             #wrapper { 
                 background-color: #FFF; 
@@ -167,87 +205,92 @@
         </style>
     </head>
     <body>
-        <header><h1>Home</h1></header>
-            <!--Navigation-->
-            <div id='menu'>
-                <nav >
-                    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-                    <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a class='dropdown-arrow' href="loans.html">Avaliable Loans</a>
-                        <ul class='sub-menus'>
-                        <li><a>Personal Loans</a></li>
-                        <li><a>Business Loans</a></li>
-                        <li><a>Foreigner Loans</a></li>
-                        <li><a>Education Loans</a></li>
-                        <li><a>Medical Loans</a></li>
-                        <li><a>Wedding Loans</a></li>
-                        <li><a>Vacation Loans</a></li>
-                        <li><a>Renovations packages</a></li>
-                        </ul>
-                    </li>
-                    <li><a>About</a></li>
-                    <li><a href="apply.html">Apply for Loans</a></li>
-                    <li><a>Contact Us</a></li>
+        <header>
+            <img src="logo.png" alt="Logo" width="100" height="50">
+        </header>
+        <!--Navigation-->
+        <div id='menu'>
+            <nav >
+                <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class='dropdown-arrow' href="loans.html">Avaliable Loans</a>
+                    <ul class='sub-menus'>
+                    <li><a>Personal Loans</a></li>
+                    <li><a>Business Loans</a></li>
+                    <li><a>Foreigner Loans</a></li>
+                    <li><a>Education Loans</a></li>
+                    <li><a>Medical Loans</a></li>
+                    <li><a>Wedding Loans</a></li>
+                    <li><a>Vacation Loans</a></li>
+                    <li><a>Renovations packages</a></li>
                     </ul>
-                </nav>
+                </li>
+                <li><a>About</a></li>
+                <li><a href="apply.html">Apply for Loans</a></li>
+                <li><a>Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!--picture-->
+        <div class="parallax">
+            <!--<img src="lender.jpg" alt="Home Pic" width="540" height="281" class="center">-->
+            <div class="caption">
+                <span class="border1">APPLY NOW</span>
+            </div>
+        </div>
+
+        <!--Body-->
+        <div id="wrapper">
+        
+            <!--left column: list avaiable loan with pictures-->
+            <div id="leftcolumn"> 
+                <!--Our mission-->
+                <div>
+                    <h2>Our mission</h2>
+                </div>
+
+                <!--image-->
+                <div class="fakeimg">Fake Image</div>
+
+                <!--List of Available Loans-->
+                <div>
+                    <h2>Available Loans</h2>
+                </div>
             </div>
 
-            <!--picture-->
-            <div>
-                <img src="lender.jpg" alt="Home Pic" width="540" height="281" class="center">
-            </div>
+            <!--right column: apply now-->
+            <div id="rightcolumn">
+                <!--6 reasons why we are top-->
+                <div>
+                    <h2>6 Reasons Why We Are One Of The Top Moneylenders</h2>
+                </div>
+                
+                <!--image-->
+                <div class="fakeimg">Fake Image</div>
 
-            <!--Body-->
-            <div id="wrapper">
+                <!--short Apply for loan-->
+                <h2>Apply Now</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" placeholder="Enter email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                        <input class="form-check-input" type="checkbox"> Remember me
+                        </label>
+                    </div>
+                    <button type="submit" class="button">Submit</button>
+                    </form> 
+            </div>
             
-                <!--left column: list avaiable loan with pictures-->
-                <div id="leftcolumn"> 
-                    <!--Our mission-->
-                    <div>
-                        <h2>Our mission</h2>
-                    </div>
-
-                    <!--image-->
-                    <div class="fakeimg">Fake Image</div>
-
-                    <!--List of Available Loans-->
-                    <div>
-                        <h2>Available Loans</h2>
-                    </div>
-                </div>
-
-                <!--right column: apply now-->
-                <div id="rightcolumn">
-                    <!--6 reasons why we are top-->
-                    <div>
-                        <h2>6 Reasons Why We Are One Of The Top Moneylenders</h2>
-                    </div>
-                   
-                    <!--image-->
-                    <div class="fakeimg">Fake Image</div>
-
-                    <!--short Apply for loan-->
-                    <h2>Apply Now</h2>
-                    <form>
-                        <div class="form-group">
-                          <label for="email">Email address:</label>
-                          <input type="email" class="form-control" placeholder="Enter email" id="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="pwd">Password:</label>
-                          <input type="password" class="form-control" placeholder="Enter password" id="pwd">
-                        </div>
-                        <div class="form-group form-check">
-                          <label class="form-check-label">
-                            <input class="form-check-input" type="checkbox"> Remember me
-                          </label>
-                        </div>
-                        <button type="submit" class="button">Submit</button>
-                      </form> 
-                </div>
-             
-            </div>
+        </div>
     </body>
     <footer>
         <small><i>Copyright &copy; CS2024</i></small> 
