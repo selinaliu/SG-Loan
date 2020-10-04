@@ -108,6 +108,47 @@
                 #menu input:checked ~ ul {display:block}
             }
 
+            /*Overlay effect*/
+            .loancontainer {
+                position: relative;
+                width: 33%;
+            }
+
+            .image {
+                display: block;
+                width: 87%;
+                height: auto;
+            }
+
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 87%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: #0099CC;
+            }
+
+            .loancontainer:hover .overlay {
+                opacity: 1;
+            }
+
+            .text {
+                color: white;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+
             /*Button*/
             .button {
                 font-family: helvetica;
@@ -249,7 +290,7 @@
             <div id="leftcolumn"> 
                 <!--Our mission-->
                 <div>
-                    <h2>Our mission</h2>
+                    <h2>Why Choose SG Loan</h2>
                 </div>
 
                 <!--image-->
@@ -259,16 +300,63 @@
                 <div>
                     <h2>Available Loans</h2>
                     <div>
-                        <p>
-                            Personal Loans
-                            Business Loans
-                            Foreigner Loans
-                            Education Loans
-                            Medical Loans
-                            Wedding Loans
-                            Vacation Loans
-                            Renovations packages
-                        </p>
+                        <div class="loancontainer" style="float: left;">
+                            <img src="personal-loans.jpg" alt="Personal Loans" class="image">
+                            <div class="overlay">
+                              <div class="text">Personal Loans</div>
+                            </div>
+                        </div>
+                        <div class="loancontainer" style="float: right;">
+                            <img src="biz-loans.jpg" alt="Business Loans" class="image">
+                            <div class="overlay">
+                              <div class="text">Business Loans</div>
+                            </div>
+                        </div>
+                        
+                        <div class="loancontainer" style="float: right;">
+                            <img src="vocation-loans.jpg" alt="Vacation Loans" class="image">
+                            <div class="overlay">
+                              <div class="text">Vacation Loans</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="loancontainer" style="float: left; margin-top: 15px;">
+                            <img src="reno-loans.jpg" alt="Renovations packages" class="image">
+                            <div class="overlay">
+                              <div class="text">Renovations packages</div>
+                            </div>
+                        </div> 
+                        <div class="loancontainer" style="float: right; margin-top: 15px;">
+                            <img src="foreigner-loans.jpg" alt="Foreigner Loans" class="image">
+                            <div class="overlay">
+                              <div class="text">Foreigner Loans</div>
+                            </div>
+                        </div>
+                        <div class="loancontainer" style="float: right; margin-top: 15px;">
+                            <img src="wed-loans.jpg" alt="Wedding Loansans" class="image">
+                            <div class="overlay">
+                              <div class="text">Wedding Loans</div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="loancontainer" style="float: left; margin-top: 15px;">
+                            <img src="edu-loans.jpg" alt="Education Loans" class="image">
+                            <div class="overlay">
+                              <div class="text">Education Loans</div>
+                            </div>
+                        </div> 
+                        <div class="loancontainer" style="float: left; margin-top: 15px;">
+                            <img src="medi-loans.jpg" alt=" Medical Loans" class="image">
+                            <div class="overlay">
+                              <div class="text"> Medical Loans</div>
+                            </div>
+                        </div>     
+                            
+                           
+                            
+                            
+                            
+                        
                     </div>
                 </div>
             </div>
@@ -277,7 +365,7 @@
             <div id="rightcolumn">
                 <!--6 reasons why we are top-->
                 <div>
-                    <h2>6 Reasons Why We Are One Of The Top Moneylenders</h2>
+                    <h3>6 Reasons Why We Are One Of The Top Moneylenders</h3>
                 </div>
                 
                 <!--image-->
@@ -305,6 +393,7 @@
             
         </div>
     </body>
+    <div style="clear:both;"></div>
     <footer>
         <small><i>Copyright &copy; CS2024</i></small> 
 		<br><em>Liu Yi Hsuan &amp; Foo Kai Lin</em>
