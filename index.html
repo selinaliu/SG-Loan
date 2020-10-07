@@ -108,6 +108,32 @@
                 #menu input:checked ~ ul {display:block}
             }
 
+            /*Split columns*/
+            #wrapper { 
+                background-color: #FFF; 
+				color: #000;
+				width: 90%;
+				margin: auto;
+				min-width:800px;
+                padding: 10px 50px;
+		    } 
+            #leftcolumn { 
+                float: left;
+				width: 680px;
+                padding: 10px 20px;
+            } 
+            #rightcolumn { 
+                margin-left: 680px;
+                width: 320px;
+                color: #000000;
+                padding: 10px 20px;
+            } 
+
+            .fakeimg {
+                height: 200px;
+                background: #aaa;
+            }
+
             /*Overlay effect*/
             .loancontainer {
                 position: relative;
@@ -169,6 +195,7 @@
                 transform: translateY(-100px);
                 opacity: 0;
                 transition: all 0.2s ease-in-out;
+                font-size: 25px;
             }
             .view-first p { 
                 transform: translateY(100px);
@@ -228,7 +255,7 @@
                 background-image: url('moneylender_singapore.gif');
 
                 /* Full height */
-                height: 80%; /*100%*/
+                height: 100%; 
 
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
@@ -256,30 +283,30 @@
                 letter-spacing: 10px;
             }
 
-            /*Split columns*/
-            #wrapper { 
-                background-color: #FFF; 
-				color: #000;
-				width: 90%;
-				margin: auto;
-				min-width:800px;
-                padding: 10px 50px;
-		    } 
-            #leftcolumn { 
-                float: left;
-				width: 650px;
-                padding: 10px 20px;
-            } 
-            #rightcolumn { 
-                margin-left: 650px;
+            /*Loan Process listing*/
+            .processcontainer {
+                position: relative;
+                height: 320px;
                 width: 350px;
-                color: #000000;
-                padding: 10px 20px;
-            } 
-
-            .fakeimg {
-                height: 200px;
-                background: #aaa;
+            }
+            .processlisting {
+                background-color: #0099CC; 
+                width: 150px; 
+                height: 150px; 
+                padding-left: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.671);
+            }
+            .processdetails {
+                background-color: rgb(226, 226, 226);
+                color: #000;
+                width: 250px;
+                font-weight: normal;
+                font-size: 1rem;
+                padding: 15px;
+                position: absolute;
+                left: 50px;
             }
 
             /*newroom*/
@@ -335,10 +362,6 @@
 
         <!--picture-->
         <div class="parallax">
-            <!--<img src="lender.jpg" alt="Home Pic" width="540" height="281" class="center">-->
-            <div class="caption">
-                <span class="border1">APPLY NOW</span>
-            </div>
         </div>
 
         <!--Body-->
@@ -355,7 +378,7 @@
                         pick the best rate based on your income and financial situation. We invite you to compare our 
                         rates with all other money lenders before making your ultimate choice. With SG Loan, your needs
                         will always come first and therefore we will discuss the best plans with you based on your finances.
-                    </p>
+                    </p><br>
                 </div>
 
                 <!--List of Available Loans-->
@@ -427,21 +450,16 @@
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                <!--Loan Process-->
-                <div>
-                    <h2>Loan Process</h2>
-
-                </div>
+                
             </div>
 
             <!--right column: apply now-->
             <div id="rightcolumn">
                 <!--6 reasons why we are top-->
                 <div>
-                    <h4>6 Features that makes SG Loan the Top Moneylender in Singapore</h4>
+                    <h5>6 Features that make SG Loan the Top Moneylender in Singapore</h5>
                     <ol>
                         <li>Quick Approval</li>
-                        <p>jshfkh</p>
                         <li>Friendly Service</li>
                         <li>Flexible Repayment Scheme</li>
                         <li>Privacy Assured</li>
@@ -451,10 +469,11 @@
                 </div>
                 
                 <!--image-->
-                <div class="fakeimg">Fake Image</div>
+                <img src="trust.jpg" style="height: 200px; width: 320px; margin-bottom: 15px;">
 
-                <!--short Apply for loan-->
-                <h4>Sign up our Email Newsletter to be the First to know our Latest Deals</h4>
+                <!--Apply for loan-->
+                <br>
+                <h5>Sign up our Email Newsletter to be the First to know our Latest Deals</h5>
                 <form>
                     <div class="form-group">
                         <label for="text">Name:</label>
@@ -473,12 +492,56 @@
                 </form> 
 
                 <!--FAQ-->
-                <h4>FAQ</h4>
+                <br>
+                <h5>FAQ</h5>
 
 
             </div>    
         </div>
         <div style="clear:both;"></div>
+        <div style="margin-left: 130px;">
+            <!--Loan Process-->
+            <br>
+            <h2>Loan Process</h2>
+            <div class="processcontainer" style="float:left;">
+                <div class="processlisting">
+                    01 
+                    <div class="processdetails">
+                       <h4>Fill up Online Form</h4> 
+                       <p>
+                        Fill up our simple loan application form, and we will get in touch 
+                        with you within the day to arrange for an appointment date.
+                       </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="processcontainer" style="float:left;">
+                <div class="processlisting">
+                    02 
+                    <div class="processdetails">
+                       <h4>Eligibility Verification</h4> 
+                       <p>
+                        Head your way down to our office, and our loan officers will verify your 
+                        eligibility together with your legal documents.
+                       </p> 
+                    </div> 
+                </div>
+             </div>
+             <div class="processcontainer" style="float: left;">
+                <div class="processlisting">
+                    03
+                    <div class="processdetails">
+                       <h4>Cash Reimbursement</h4> 
+                       <p>
+                        Once you are satisfied with the terms in the loan contract, upon sign-off by 
+                        both parties you will receive the cash or cheque on the spot.
+                       </p> 
+                    </div> 
+                </div>
+            </div>        
+        </div>
+        <div style="clear:both;"></div>
+
         <!--News Room-->
         <div class="newsroom">
             <h2 style="margin-left: 133px;">Newsroom</h2>
