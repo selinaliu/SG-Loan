@@ -13,7 +13,7 @@
             body, html {
                 height: 100%;
 				font-family: "Open Sans", sans-serif;
-                background-color: #bd9dea;
+                background-color: #FFFFFF;
             }
 
             /*Navigation*/
@@ -161,7 +161,7 @@
                 padding: 10px 25px;
                 border-radius: 25px;
                 border: 0px solid #3866A3;
-                background: #0099CC;
+                background: #7A77B9;
             }
             .button:hover {
                 color: #005673 !important;
@@ -175,6 +175,7 @@
                 margin-right: auto;
                 width: 50%;
 				padding: 40px;
+                padding-left: 75px;
             }
             
             /*Split columns*/
@@ -199,7 +200,33 @@
 				text-align: center;
 			}
 
-			h3{font-size: 16px;}
+            h5{
+                font-size: 24px;
+				color:#f2c76e; 
+				text-align: center;
+            }
+
+			h3{font-size: 16px;
+                color: #7A77B9;}
+
+            h4{color:#7A77B9;
+                font-weight: 900;}
+
+            p{color:#7A77B9;}
+
+            label{font-size: 14px;}
+
+            #wrapper1{
+                background-color: #ea7186; 
+                width:100%;
+            }
+
+            #wrapper2{
+                color: #7A77B9;
+                font-size: 16px;
+                padding: 20px;
+                padding-left: 170px;
+            }
 
 			/*table*/
 			table {	margin: auto; 
@@ -258,9 +285,9 @@
 		
 		<!--Body-->
         <div id="wrapper">
-		<h1><br>How to Apply</h1>
+		<h1 style="color:#7A77B9"><br><br>How to Apply</h1>
 		
-		<h2 class="text-center" style="color:#0099CC; font-size: 24px;"><b>Get Your Fast Loan in 3 Simple Steps</b></h2>
+		<h2 class="text-center" style="color:#f2c76e; font-size: 24px;"><b>Get Your Fast Loan in 3 Simple Steps</b></h2>
 		
 		<div class="row setep-row" id="row-2076039299">
 		<div class="col medium-4 small-12 large-4"><div class="col-inner">
@@ -287,7 +314,7 @@
 			<div class="icon-box-img" style="width: 125px">
 				<div class="icon">
 					<div class="icon-inner center">
-						<img width="203" height="203" src="https://sgloanwise.com/wp-content/uploads/2019/11/applycation-icon-2.png" class="attachment-medium size-medium" alt="">
+						<img width="203" height="204" src="https://sgloanwise.com/wp-content/uploads/2019/11/applycation-icon-2.png" class="attachment-medium size-medium" alt="">
 					</div>
 				</div>
 			</div>
@@ -305,7 +332,7 @@
 			<div class="icon-box-img" style="width: 125px">
 				<div class="icon">
 					<div class="icon-inner center">
-						<img width="203" height="203" src="https://sgloanwise.com/wp-content/uploads/2019/11/applycation-icon-3.png" class="attachment-medium size-medium" alt="">					
+						<img width="203" height="204" src="https://sgloanwise.com/wp-content/uploads/2019/11/applycation-icon-3.png" class="attachment-medium size-medium" alt="">					
 					</div>
 				</div>
 			</div>
@@ -317,34 +344,36 @@
 		</div>
 		</div></div>
 		</div>
-		
-		<h1><br>Submit an Application</h1>
-		<h2><b>Complete this short form and we will get back to you in no time.</b></h2>
+        </div>
+            <br>
+        <div id="wrapper1">
+		<h1 style="color:#FFFFFF;"><br>Submit an Application</h1>
+		<h5><b>Lowest prices guaranteed. We're just a click away!</b></h2>
 		<p></p>
 		<!--table form-->
 		<table border="1">
 		<tr>
 		<td>
 		
-		<form action="show_get.php" method="get"> 
+		<form action="show_get.php" method="get"  style="padding: 10px;"> 
 		<div class="form-group">
 			<label for="name">Name*:</label>
-			<input type="name" class="form-control" id="name" placeholder="Name" required>
+			<input type="name" class="form-control" id="name" placeholder="Name" style="font-size:14px;" required>
 		</div>
 		
 		<div class="form-group">
 			<label for="email">Email Address*:</label>
-			<input type="email" class="form-control" id="email" placeholder="Email" required>
+			<input type="email" class="form-control" id="email" placeholder="Email" style="font-size:14px;" required>
 		</div>
 		
 		<div class="form-group">
 			<label for="number">Contact Number*:</label>
-			<input type="tel" class="form-control" id="number" placeholder="Number" pattern="[0-9]{8}" required>
+			<input type="tel" class="form-control" id="number" placeholder="Number" pattern="[0-9]{8}" style="font-size:14px;" required>
 		</div>
 				
 		<div class="form-group">
 			<label for="amount">Loan Amount*:</label>
-			<select class="form-control" id="amount" placeholder="Loan Amount ($)" required>
+			<select class="form-control" id="amount" placeholder="Loan Amount ($)" style="font-size:14px;" required>
 				<option>$10,000-$25,000</option>
 				<option>$25,000-$50,000</option>
 				<option>$50,000-$100,000</option>
@@ -355,7 +384,7 @@
 		
 		<div class="form-group">
 			<label for="type">Loan Type:</label>
-			<select class="form-control" name="type" id="type" placeholder="What type of loan are you looking for?">
+			<select class="form-control" name="type" id="type" placeholder="What type of loan are you looking for?" style="font-size:14px;">
 				<option>Personal Loan</option>
 				<option>Business Loan</option>
 				<option>Foreigner Loan</option>
@@ -369,7 +398,7 @@
 		
 		<div class="form-group">
 			<label for="income">Gross Monthly Income:</label>
-			<select class="form-control" name="income" id="income">
+			<select class="form-control" name="income" id="income" style="font-size:14px;">
 				<option>Below $1500</option>
 				<option>$1500-$3000</option>
 				<option>$3000-$5000</option>
@@ -379,14 +408,25 @@
 		</div>
 		
 		<input type="checkbox" id="terms" name="terms" required>
-		<label for="terms"><small>By submitting, I hereby consent and authorize SG Money Lender to use the information given to customize a financial package for me.</small></label>
+		<label for="terms" style="font-size: 12px;">By submitting, I hereby consent and authorize SG Money Lender to use the information given above to customize a financial package for me.</label>
 		<br><br> <button type="submit" class="button">Submit</button> 
 		</form>
 		</td>
 		</tr>
 		</table><br><br>
-		
-		</div>
+        </div>
+
+        <div id="wrapper2">
+            <p style="font-size:18px;"><br><u><b>Eligibility</b></u><br></p>
+            <p>In order to qualify for a loan, you must be:<br>
+            <ul>
+                <li>A citizen or permanent resident of Singapore, or for foreigners have a passport and employment pass.</li>
+                <li>Above 21 years of age, and is not an undischarged bankrupt, nor facing any bankruptcy proceeding.</li>
+                <li>Have a valid income prove, and valid work permit (for foreigners).</li>
+            </ul>
+            </p><br>
+        </div>
+
 	</body>
 	
 	 <footer>
