@@ -18,10 +18,10 @@
 
             /*Navigation*/
             #menu {
-                background: #bd9dea;
+                background:#bd9dea;
                 color: #FFF;
-                height: 40px;
-                padding-left: 18px;
+                height: 60px;
+                padding-left: 250px;
                 /*border-radius: 12px;*/
             }
             #menu ul, #menu li {
@@ -39,8 +39,8 @@
             }
             #menu a {
                 display: block;
-                line-height: 40px;
-                padding: 0 14px;
+                line-height: 60px;
+                padding: 0 20px;
                 text-decoration: none;
                 color: #FFFFFF;
                 font-size: 16px;
@@ -51,7 +51,7 @@
                 margin-left: 5px;
             }
             #menu li a:hover {
-                color: #005673;
+                color: #f2c76e;
                 background: #F2F2F2;
             }
             #menu input {
@@ -65,7 +65,7 @@
             }
             #menu label {
                 display: none;
-                line-height: 40px;
+                line-height: 30px;
                 text-align: center;
                 position: absolute;
                 left: 35px
@@ -78,8 +78,8 @@
             #menu ul.sub-menus{
                 height: auto;
                 overflow: hidden;
-                width: 190px;
-                background: #005673;
+                width: 200px;
+                background: #d7d4ff;
                 position: absolute;
                 z-index: 99;
                 display: none;
@@ -97,7 +97,7 @@
             }
             #menu ul.sub-menus a:hover{
                 background: #F2F2F2;
-                color: #005673;
+                color: #f2c76e;
             }
             @media screen and (max-width: 800px){
                 #menu {position:relative}
@@ -226,37 +226,35 @@
     </head>
 	
     <body>
-        <header>
-            <a href="index.html">
-                <img src="logo_blue.png" alt="Logo" width="100" height="50">
-            </a>
-        </header>
-		
-        <!--Navigation-->
-        <div id='menu'>
-            <nav >
-                <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a class='dropdown-arrow' href="loans.html">Available Loans</a>
-                        <ul class='sub-menus'>
-                        <li><a>Personal Loans</a></li>
-                        <li><a>Business Loans</a></li>
-                        <li><a>Foreigner Loans</a></li>
-                        <li><a>Education Loans</a></li>
-                        <li><a>Medical Loans</a></li>
-                        <li><a>Wedding Loans</a></li>
-                        <li><a>Vacation Loans</a></li>
-                        <li><a>Renovations packages</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="apply.html">Apply for Loans</a></li>
-                    <li><a>FAQ</a></li>
-                    <li><a>Contact Us</a></li>
-                </ul>
-            </nav>
-        </div>
+        <header style="position: fixed;top: 0;width: 100%;z-index: 1;background-color:#bd9dea;">
+        
+            <!--Navigation-->
+           <div id='menu'>
+               <nav >
+                   <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                   <ul>
+                   <li><a href="home1.html">Home</a></li>
+                   <li><a>About</a></li>
+                   <li><a class='dropdown-arrow' href="loans.html">Available Loans</a>
+                       <ul class='sub-menus'>
+                       <li><a>Personal Loans</a></li>
+                       <li><a>Business Loans</a></li>
+                       <li><a>Foreigner Loans</a></li>
+                       <li><a>Education Loans</a></li>
+                       <li><a>Medical Loans</a></li>
+                       <li><a>Wedding Loans</a></li>
+                       <li><a>Vacation Loans</a></li>
+                       <li><a>Renovations packages</a></li>
+                       </ul>
+                   </li>
+                   <li><img src="logo_yellow.png" alt="Logo" width="100" height="50"></li>
+                   <li><a href="apply.html">Apply for Loans</a></li>
+                   <li><a>FAQ</a></li>
+                   <li><a>Contact Us</a></li>
+                   </ul>
+               </nav>
+           </div>
+       </header>
 		
 		<!--Body-->
         <div id="wrapper">
