@@ -108,6 +108,32 @@
                 #menu input:checked ~ ul {display:block}
             }
 
+            /*Split columns*/
+            #wrapper { 
+                background-color: #FFF; 
+				color: #000;
+				width: 90%;
+				margin: auto;
+				min-width:800px;
+                padding: 10px 50px;
+		    } 
+            #leftcolumn { 
+                float: left;
+				width: 680px;
+                padding: 10px 20px;
+            } 
+            #rightcolumn { 
+                margin-left: 680px;
+                width: 330px;
+                color: #000000;
+                padding: 10px 20px;
+            } 
+
+            .fakeimg {
+                height: 200px;
+                background: #aaa;
+            }
+
             /*Overlay effect*/
             .loancontainer {
                 position: relative;
@@ -149,6 +175,57 @@
                 text-align: center;
             }
 
+            /*hover effecr 2*/
+            .view-first img { 
+                transition: all 0.2s linear;
+                width: 87%;
+            }
+            .view-first .mask {
+                opacity: 0;
+                background-color:#0099CC; 
+                transition: all 0.4s ease-in-out;
+                width: 87%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+            .view-first h2 {
+                transform: translateY(-100px);
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+                font-size: 25px;
+            }
+            .view-first p { 
+                transform: translateY(100px);
+                opacity: 0;
+                transition: all 0.2s linear;
+            }
+            .view-first a.info{
+                opacity: 0;
+                transition: all 0.2s ease-in-out;
+            } 
+            .view-first:hover .mask { 
+                opacity: 0.8;
+
+            }
+            .view-first:hover h2,
+            .view-first:hover p,
+            .view-first:hover a.info {
+                opacity: 1;
+                transform: translateY(0px);
+                margin-left: 10px;
+                margin-top: 10px;
+                color: #FFF;
+            }
+            .view-first:hover p {
+                transition-delay: 0.1s;
+            }
+            .view-first:hover a.info {
+                transition-delay: 0.2s;
+            }
+
             /*Button*/
             .button {
                 font-family: helvetica;
@@ -178,7 +255,7 @@
                 background-image: url('moneylender_singapore.gif');
 
                 /* Full height */
-                height: 80%; /*100%*/
+                height: 100%; 
 
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
@@ -206,30 +283,51 @@
                 letter-spacing: 10px;
             }
 
-            /*Split columns*/
-            #wrapper { 
-                background-color: #FFF; 
-				color: #000;
-				width: 90%;
-				margin: auto;
-				min-width:800px;
-                padding: 10px 50px;
-		    } 
-            #leftcolumn { 
-                float: left;
-				width: 650px;
-                padding: 10px 20px;
-            } 
-            #rightcolumn { 
-                margin-left: 650px;
+            /*Loan Process listing*/
+            .processcontainer {
+                position: relative;
+                height: 320px;
                 width: 350px;
-                color: #000000;
-                padding: 10px 20px;
-            } 
+            }
+            .processlisting {
+                background-color: #0099CC; 
+                width: 150px; 
+                height: 150px; 
+                padding-left: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.671);
+            }
+            .processdetails {
+                background-color: rgb(226, 226, 226);
+                color: #000;
+                width: 250px;
+                font-weight: normal;
+                font-size: 1rem;
+                padding: 15px;
+                position: absolute;
+                left: 50px;
+            }
 
-            .fakeimg {
-                height: 200px;
-                background: #aaa;
+            /*FAQ*/
+            .grow {
+                padding: 5px 5px 5px 5px;
+                border-radius: 10px;
+                height: 30px;
+                width: 100%;
+                margin: 5px 1% 5px 1%;
+                float: left;
+                position: relative;
+                transition: height 0.5s;
+                -webkit-transition: height 0.5s;
+                text-align: center;
+                overflow: hidden;
+                background-color: #0099CC;
+                color: #FFF;
+            }
+
+            .grow:hover {
+                height: 130px;
             }
 
             /*newroom*/
@@ -252,11 +350,11 @@
         </style>
     </head>
     <body>
-        <header>
+        <header style="position: fixed;top: 0;width: 100%;z-index: 1;background-color: #FFF;">
             <a href="index.html">
                 <img src="logo_blue.png" alt="Logo" width="100" height="50">
             </a>
-        </header>
+        
         <!--Navigation-->
         <div id='menu'>
             <nav >
@@ -281,13 +379,10 @@
                 </ul>
             </nav>
         </div>
+        </header>
 
         <!--picture-->
         <div class="parallax">
-            <!--<img src="lender.jpg" alt="Home Pic" width="540" height="281" class="center">-->
-            <div class="caption">
-                <span class="border1">APPLY NOW</span>
-            </div>
         </div>
 
         <!--Body-->
@@ -297,15 +392,14 @@
             <div id="leftcolumn"> 
                 <!--Our mission-->
                 <div>
-                    <h2>Why Choose SG Loan</h2>
+                    <h2>Our Mission</h2>
                     <p>
-                        At U Credit Pte Ltd (Licence No: 180/2019), we are proud to offer one of the most 
-                        affordable interest rates in Singapore. Our loan officers will take you through the 
-                        payment schedule to ensure you pick the best rate based on your income and financial 
-                        situation. We invite you to compare our rates with all other money lenders before 
-                        making you ultimate choice. With U Credit, your needs always come first and therefore 
-                        we will discuss the best plans with you based on your finances.
-                    </p>
+                        At SG Loan (Licence No: 224/2020), we are proud to offer one of the most affordable interest
+                        rates in Singapore. Our loan officers will guide you through the payment schedule to ensrue you
+                        pick the best rate based on your income and financial situation. We invite you to compare our 
+                        rates with all other money lenders before making your ultimate choice. With SG Loan, your needs
+                        will always come first and therefore we will discuss the best plans with you based on your finances.
+                    </p><br>
                 </div>
 
                 <!--List of Available Loans-->
@@ -360,23 +454,31 @@
                         <div class="loancontainer" style="float: left; margin-top: 15px;">
                             <img src="medi-loans.jpg" alt=" Medical Loans" class="image">
                             <div class="overlay">
-                              <div class="text"> Medical Loans</div>
+                              <div class="text">Medical Loans</div>
                             </div>
-                        </div>      
+                        </div>
+                        <div class="loancontainer" style="float: left; margin-top: 15px;">
+                        
+                        <div class="view view-first" >  
+                            <img src="medi-loans.jpg" />  
+                            <div class="mask">  
+                            <h2>Medical Loans</h2>  
+                            <p>Your Text</p>  
+                                <a href="#" class="info">Read More</a>  
+                            </div>  
+                       </div>
+                    </div>     
                     </div>
                 </div>
                 <div style="clear:both;"></div>
-                <!--Loan Process-->
-                <div>
-                    <h2>Loan Process</h2>
-                </div>
+                
             </div>
 
             <!--right column: apply now-->
             <div id="rightcolumn">
                 <!--6 reasons why we are top-->
                 <div>
-                    <h4>6 Features that makes us the Top Moneylender</h4>
+                    <h5>6 Features that make SG Loan the Top Moneylender in Singapore</h5>
                     <ol>
                         <li>Quick Approval</li>
                         <li>Friendly Service</li>
@@ -388,10 +490,11 @@
                 </div>
                 
                 <!--image-->
-                <div class="fakeimg">Fake Image</div>
+                <img src="trust.jpg" style="height: 200px; width: 320px; margin-bottom: 15px;">
 
-                <!--short Apply for loan-->
-                <h4>Sign up our Email Newsletter to be the First to know our Latest Deals</h4>
+                <!--Apply for loan-->
+                <br>
+                <h5>Sign up our Email Newsletter to be the First to know our Latest Deals</h5>
                 <form>
                     <div class="form-group">
                         <label for="text">Name:</label>
@@ -410,12 +513,69 @@
                 </form> 
 
                 <!--FAQ-->
-                <h4>FAQ</h4>
+                <br>
+                <h4>Frequent Asked Questions</h4>
+                <div class="grow">
+                    <h6>Do I qualify for a cash loan?</h6>
+                    Singapore Citizen, PR or Foreigner above 21 years old and permanently employed.
+                </div>
+                <div class="grow">
+                    <h6>How much can I borrow?</h6>
+                    Any amount for secured loans. For unsecured loans, $1500 to 6 times of your monthly income. T&C apply.
+                </div>
+                <div class="grow">
+                    <h6>What are the interest rates?</h6>
+                    The maximum rate of late interest a moneylender can charge is <strong>4% per month</strong> for each 
+                    month the loan is repaid late.
+                </div>
 
 
             </div>    
         </div>
         <div style="clear:both;"></div>
+        <div style="margin-left: 130px;">
+            <!--Loan Process-->
+            <br>
+            <h2>Loan Process</h2>
+            <div class="processcontainer" style="float:left;">
+                <div class="processlisting">
+                    01 
+                    <div class="processdetails">
+                       <h4>Fill up Online Form</h4> 
+                       <p>
+                        Fill up our simple loan application form, and we will get in touch 
+                        with you within the day to arrange for an appointment date.
+                       </p> 
+                    </div> 
+                </div> 
+            </div> 
+            <div class="processcontainer" style="float:left;">
+                <div class="processlisting">
+                    02 
+                    <div class="processdetails">
+                       <h4>Eligibility Verification</h4> 
+                       <p>
+                        Head your way down to our office, and our loan officers will verify your 
+                        eligibility together with your legal documents.
+                       </p> 
+                    </div> 
+                </div>
+             </div>
+             <div class="processcontainer" style="float: left;">
+                <div class="processlisting">
+                    03
+                    <div class="processdetails">
+                       <h4>Cash Reimbursement</h4> 
+                       <p>
+                        Once you are satisfied with the terms in the loan contract, upon sign-off by 
+                        both parties you will receive the cash or cheque on the spot.
+                       </p> 
+                    </div> 
+                </div>
+            </div>        
+        </div>
+        <div style="clear:both;"></div>
+
         <!--News Room-->
         <div class="newsroom">
             <h2 style="margin-left: 133px;">Newsroom</h2>
