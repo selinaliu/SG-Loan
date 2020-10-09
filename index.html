@@ -11,6 +11,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,800&display=swap" rel="stylesheet">        
+        
         <style>
             body, html, p {
                 height: 100%;
@@ -168,8 +170,7 @@
                 background-color:#bd9dea;
                 background-image: url('https://sgbestpersonalloancompare.com/wp-content/uploads/2020/06/quote.png');
                 /* Full height */
-                height: 100%; 
-
+                height: 100%;
                 /* Create the parallax scrolling effect */
                 background-attachment: fixed;
                 background-position-x: 450px;
@@ -185,9 +186,29 @@
                 left: 0;
                 top:  150px;  /*27%;*/
                 width: 60%;
-                text-align: center;
-                text-shadow: 2px 2px 5px #7a77b9;
-                font-family: 'Merriweather Sans', sans-serif;
+                text-align: left;
+                padding-left: 55px;
+                text-shadow: 2px 5px 5px #7a77b9;
+                font-family: 'Nunito Sans', sans-serif;
+            }
+
+            .glow {
+                font-size: 50px;
+                color: #fff;
+                text-align: left;
+                -webkit-animation: glow 1s ease-in-out infinite alternate;
+                -moz-animation: glow 1s ease-in-out infinite alternate;
+                animation: glow 1s ease-in-out infinite alternate;
+            }
+
+            @-webkit-keyframes glow {
+            from {
+            text-shadow: 0 0 10px #f2c76e, 0 0 20px #f2c76e, 0 0 30px #7a77b9, 0 0 40px #7A77B9, 0 0 50px #7A77B9, 0 0 60px #7A77B9, 0 0 70px #7A77B9;
+            }
+  
+            to {
+            text-shadow: 0 0 20px #FFF, 0 0 30px #f2c76e, 0 0 40px #f2c76e, 0 0 50px #f2c76e, 0 0 60px #f2c76e, 0 0 70px #f2c76e, 0 0 80px #f2c76e;
+            }
             }
 
             /*text colour*/
@@ -195,16 +216,16 @@
                 color: #f2c76e;
                 font-size: 40px;
                 font-weight: bold;
-                letter-spacing: 4px;
+                letter-spacing: 3px;
             }
 
             /*box*/
             .apply {
                 position: absolute;
-                left: 0;
-                top: 350px; /*60%;*/
+                left: 0px;
+                top: 400px; /*60%;*/
                 width: 60%;
-                text-align: center;  
+                text-align: left;  
             }
 
             /*Apply Button*/
@@ -248,7 +269,7 @@
                 background-image: url('https://sgbestpersonalloancompare.com/wp-content/uploads/2018/05/home_landing2_sectionbg5.png'); 
                 background-size: 90%;
                 background-attachment: fixed;
-                height: 450px;
+                height: 455px;
             }
 
             .centertext{
@@ -407,8 +428,8 @@
         <!--picture-->
         <div class="parallax">
             <div class="applytext w3-animate-left" style="-webkit-animation-duration: 2.5s;">
-                <span class="border2">1% INTEREST RATES 
-                    <br> Assured Loans for 
+                <span class="border2" style="font-size: 48px;"><div class="glow" style="color:#7a77b9;">1% INTEREST RATES</div>
+                        Assured Loans for 
                     <br>Uncertain Times
                 </span>
             </div>
@@ -651,8 +672,8 @@
     </body>
     <div style="clear:both;"></div>
     <footer>
-        <div style="clear:both;"></div>
-        Contact Us  |  <i class="fa fa-phone" style="margin-right: 20px;"></i> <i class="fa fa-at" style="margin-right: 20px;"></i> <i class="fa fa-facebook"></i>
+        <div style="clear:both; font-size: 16px;"></div>
+        Contact Us  |  <i class="fa fa-phone" style="margin-right: 20px; font-size:16px;"></i> <i class="fa fa-at" style="margin-right: 20px; font-size:16px;"></i> <i class="fa fa-facebook" style="font-size:16px;"></i>
         <br><br>Copyright &copy; SG Money Lender. All Rights Reserved.
     </footer>
 </html>
