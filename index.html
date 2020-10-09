@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&display=swap" rel="stylesheet"> 
         <style>
             body, html, p {
                 height: 100%;
@@ -139,7 +140,7 @@
 				width: 90%;
 				margin: auto;
 				min-width:800px;
-                padding: 10px 50px;
+                padding: 0px 50px;
 		    } 
 
             /*Overlay effect*/
@@ -195,6 +196,7 @@
                 border: 0px ;
                 background: #7a77b9;
             }
+
             .button:hover {
                 color: #7a77b9 !important;
                 background: #ebe8e7;
@@ -217,30 +219,50 @@
             
             /*Caption on top of scrolling image*/
             /*box*/
-            .caption {
+            .applytext {
                 position: absolute;
                 left: 0;
-                top:75%;
-                width: 100%;
+                top:27%;
+                width: 60%;
                 text-align: center;
-                color: #000;
-            }
-            /*text colour*/
-            .caption span.border1 {
-                background-color: #0099CC;
-                color: #fff;
-                padding: 15px;
-                font-size: 20px;
-                letter-spacing: 10px;
+                text-shadow: 2px 2px 5px #7a77b9;
+                font-family: 'Merriweather Sans', sans-serif;
             }
 
-            /*Features*/
-            .features {
-                background-image: url('https://sgbestpersonalloancompare.com/wp-content/uploads/2018/05/home_landing2_sectionbg5.png'); 
-                background-size: 90%;
-                background-attachment: fixed;
-                height: 480px;
-                padding-top: 20px;
+            /*text colour*/
+            .applytext span.border2 {
+                color: #f2c76e;
+                font-size: 40px;
+                font-weight: bold;
+                letter-spacing: 4px;
+            }
+
+            /*box*/
+            .apply {
+                position: absolute;
+                left: 0;
+                top: 60%;
+                width: 60%;
+                text-align: center;  
+            }
+
+            /*Apply Button*/
+            .apply button.border1 {
+                background-color: #f2c76e;
+                color: #fff;
+                padding: 10px 25px;
+                margin-top: 10px;
+                margin-left: 20px;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 10px;
+                border: 0;
+                border-radius: 25px;
+            }
+
+            .apply button:hover {
+                color: #ebe8e7 !important;
+                background: #7a77b9;
             }
 
             /*Mission*/
@@ -250,48 +272,39 @@
                 background-attachment: fixed;
                 padding-top: 20px;
             }
-
-            /*Reviewa*/
-            .review {
+            
+            /*We Care*/
+            .features {
                 background-image: url('https://sgbestpersonalloancompare.com/wp-content/uploads/2018/05/home_landing2_sectionbg5.png'); 
                 background-size: 90%;
                 background-attachment: fixed;
                 height: 480px;
+                padding-top: 20px;
+            }
+
+            /*Reviews*/
+            .review {
+                background-image: url('https://sgbestpersonalloancompare.com/wp-content/uploads/2018/05/home_landing2_sectionbg5.png'); 
+                background-size: 90%;
+                background-attachment: fixed;
+                height: 450px;
             }
 
             .centertext{
                 margin-left: 250px;
             }
 
-            /*customers' reviews*/
-            .reviewcontainer {
-                position: relative;
-                height: 320px;
-                width: 350px;
-            }
-            .reviewlisting {
-                background-color: #bd9dea; 
-                width: 150px; 
-                height: 150px; 
-                padding-left: 15px;
-                font-size: 40px;
-                font-weight: bold;
-                color: rgba(255, 255, 255, 0.671);
-            }
-            .reviewdetails {
-                background-color: rgb(226, 226, 226);
-                color: #000;
-                width: 250px;
-                font-weight: normal;
-                font-size: 1rem;
-                padding: 15px;
-                position: absolute;
-                left: 50px;
-            }
-            .checked {
-                color: orange;
+            /*center the picture*/
+            .center {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+				padding: 20px;
+                padding-left: 90px;
             }
 
+            /*Availiable loanss*/
             .loans {
                 background-color: #f2c76e;
                 padding: 25px 120px;
@@ -316,6 +329,7 @@
                 width: 330px;
                 font-weight: bold;
                 font-size: 25px;
+                font-family: 'Merriweather Sans', sans-serif;
             }
 
             /*FAQ*/
@@ -356,18 +370,37 @@
                 */
             }
 
-            /*center the picture*/
-            .center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
-				padding: 20px;
-                padding-left: 90px;
+            /*customers' reviews*/
+            .reviewcontainer {
+                position: relative;
+                width: 350px;
+            }
+            .reviewlisting {
+                background-color: #bd9dea; 
+                width: 150px; 
+                height: 150px; 
+                padding-left: 15px;
+                font-size: 40px;
+                font-weight: bold;
+                color: rgba(255, 255, 255, 0.671);
+            }
+            .reviewdetails {
+                background-color: #ebe8e7;
+                color: #000;
+                width: 250px;
+                font-weight: normal;
+                font-size: 1rem;
+                padding: 15px;
+                position: absolute;
+                left: 50px;
+            }
+            .checked {
+                color: orange;
             }
 
             /*footer*/
             footer {
+                font-family: "Open Sans", sans-serif;
                 font-size:70%;
 				text-align: center;
 				clear: right;
@@ -412,8 +445,15 @@
 
         <!--picture-->
         <div class="parallax">
-            <div class="caption w3-animate-left">
-                <span class="border1">APPLY NOW</span>
+            <div class="applytext w3-animate-left" style="-webkit-animation-duration: 1s;">
+                <span class="border2">1% INTEREST RATES 
+                    <br> Assured Loans for 
+                    <br>Uncertain Times
+                </span>
+            </div>
+
+            <div class="apply w3-animate-left" style="-webkit-animation-duration: 2s;">
+                <button class="border1">APPLY NOW</button>
             </div>
             
         </div>
@@ -579,14 +619,14 @@
         <!--Customers' Review-->
         <br>
         <div class="review">
-            <h1 style="padding: 15px;">Customers' Review</h1>
+            <h1 style="padding: 5px;">Customers' Review</h1>
             <br>
             <div style="margin-left: 130px;">
                 <div class="reviewcontainer" style="float:left;">
                     <div class="reviewlisting">
                         01 
                         <div class="reviewdetails">
-                        <h2>Reliable & Fast</h2> 
+                        <h2 style="font-family: 'Merriweather Sans', sans-serif;">Reliable & Fast</h2> 
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -606,7 +646,7 @@
                     <div class="reviewlisting">
                         02 
                         <div class="reviewdetails">
-                        <h2>Great Rates</h2>
+                        <h2 style="font-family: 'Merriweather Sans', sans-serif;">Great Rates</h2>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -626,7 +666,7 @@
                     <div class="reviewlisting">
                         03
                         <div class="reviewdetails">
-                        <h2>Easy To Apply</h2> 
+                        <h2 style="font-family: 'Merriweather Sans', sans-serif;">Easy To Apply</h2> 
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
                         <span class="fa fa-star checked"></span>
@@ -649,7 +689,8 @@
     <div style="clear:both;"></div>
     <footer>
         <div style="clear:both;"></div>
-        <small><i>Copyright &copy; CS2024</i></small> 
+        <i class="fa fa-phone" style="margin-right: 20px;"></i> <i class="fa fa-at" style="margin-right: 20px;"></i> <i class="fa fa-facebook"></i>
+        <br><small><i>Copyright &copy; CS2024</i></small> 
 		<br><em>Liu Yi Hsuan &amp; Foo Kai Lin</em>
     </footer>
 </html>
